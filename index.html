@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>simple pattern generator</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400" rel="stylesheet">
+	
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+		}
+
+		canvas {
+			margin: auto;
+		}
+
+		#randomize {
+			font-family: 'Roboto Mono', Menlo, Lato, monospace;
+			letter-spacing: 1.5px;
+			cursor: pointer;
+			transition: all 0.25s ease;
+			position: absolute;
+			bottom: 5%;
+			background: white;
+		  border: 2px solid black;
+		  font-size: 16px;
+		  width: 125px;
+			left: calc(50% - 125px);
+			outline: none;
+		}
+
+		#randomize:active, #randomize:hover {
+			background: black;
+			border-color: white;
+			color: white;
+		}
+
+		#randomize:active {
+			transform: translateY(1px);
+		}
+
+		.github-link {
+		  position: fixed;
+		  top: 20px;
+		  right: 20px;
+		  user-select: none !important;
+		}
+	</style>
+</head>
+<body>
+	<button id="randomize" onclick="generatePattern()">randomize</button>
+
+	<a class="github-link" href="https://github.com/ricardomatias/simple-pattern" target="_blank">
+		<img src="github-link.png" alt="GitHub Logo">
+	</a>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.8/p5.min.js"></script>
+	<script src="sketch.js"></script>
+</body>
+</html>

@@ -27,7 +27,6 @@ var patterns = {
 		fill(strokeColor);
 		noStroke();
 
-		// draw top -> down
 		beginShape();
 
 		vertex(0, 0);

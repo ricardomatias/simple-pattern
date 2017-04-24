@@ -22,17 +22,20 @@
 			margin: auto;
 		}
 
+		.random-container {
+			width: 100%;
+		  position: fixed;
+		  display: flex;
+		  justify-content: center;
+		  bottom: 30px;
+		}
+
 		#randomize {
 			letter-spacing: 1px;
 			cursor: pointer;
 			transition: all 0.25s ease;
-			position: absolute;
-			bottom: 20px;
 			background: white;
 		  border: 2px solid black;
-		  font-size: 16px;
-		  width: 125px;
-			left: calc(50% - 125px);
 			outline: none;
 		}
 
@@ -47,27 +50,39 @@
 		}
 
 		.github-link {
-		  position: fixed;
-		  bottom: 20px;
-		  right: 20px;
-		  user-select: none !important;
+			position: fixed;
+			bottom: 3px;
+			right: 5px;
+			user-select: none !important;
+		}
+
+		.github-link img {
+		  width: 20px;
 		}
 
 		.website-link {
 			color: white;
-		  position: absolute;
-		  bottom: 20px;
-		  left: 20px;
-		  text-decoration: none;
-			letter-spacing: 1px;
-			font-size: 14px;
+			position: fixed;
+			bottom: 5px;
+			left: 5px;
+			text-decoration: none;
+		  letter-spacing: 1.5px;
+		  font-size: 10px;
+		}
+
+		@media screen and (min-width: 769px) {
+			#randomize {
+				font-size: 14px;
+			}
 		}
 	</style>
 </head>
 <body>
-	<a href="http://ricardomatias.net" class="website-link">ricardomatias.net</a>
+	<div class="random-container">
+		<button id="randomize" type="button" onclick="generatePattern()" ontouchstart="generatePattern()">randomize</button>
+	</div>
 
-	<button id="randomize" onclick="generatePattern()">randomize</button>
+	<a href="http://ricardomatias.net" class="website-link">ricardomatias.net</a>
 
 	<a class="github-link" href="https://github.com/ricardomatias/simple-pattern" target="_blank">
 		<img src="github-link.png" alt="GitHub Logo">

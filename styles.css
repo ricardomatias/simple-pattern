@@ -20,8 +20,9 @@ canvas {
 
 .github-link {
 	position: fixed;
-	bottom: 3.5px;
-	right: 10px;
+	bottom: 3px;
+	right: 3px;
+  padding: 7px;
 }
 
 .github-link img {
@@ -31,7 +32,7 @@ canvas {
 .website-link {
 	color: white;
 	position: fixed;
-	bottom: 10px;
+	bottom: 16px;
 	left: 10px;
 	text-decoration: none;
   letter-spacing: 1.5px;

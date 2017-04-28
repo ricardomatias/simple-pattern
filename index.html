@@ -6,76 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400" rel="stylesheet">
-
-	<style>
-		* {
-			font-family: 'Roboto Mono', Menlo, Lato, monospace;
-		}
-
-		body {
-			margin: 0;
-			padding: 0;
-			overflow: hidden;
-		}
-
-		canvas {
-			margin: auto;
-		}
-
-		.random-container {
-			width: 100%;
-		  position: fixed;
-		  display: flex;
-		  justify-content: center;
-		  bottom: 30px;
-		}
-
-		#randomize {
-			letter-spacing: 1px;
-			cursor: pointer;
-			transition: all 0.25s ease;
-			background: white;
-		  border: 2px solid black;
-			outline: none;
-		}
-
-		#randomize:active, #randomize:hover {
-			background: black;
-			border-color: white;
-			color: white;
-		}
-
-		#randomize:active {
-			transform: translateY(1px);
-		}
-
-		.github-link {
-			position: fixed;
-			bottom: 3px;
-			right: 5px;
-			user-select: none !important;
-		}
-
-		.github-link img {
-		  width: 20px;
-		}
-
-		.website-link {
-			color: white;
-			position: fixed;
-			bottom: 5px;
-			left: 5px;
-			text-decoration: none;
-		  letter-spacing: 1.5px;
-		  font-size: 10px;
-		}
-
-		@media screen and (min-width: 769px) {
-			#randomize {
-				font-size: 14px;
-			}
-		}
-	</style>
+	<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 	<div class="random-container">
@@ -91,5 +22,18 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.8/p5.min.js"></script>
 	<script src="random.js"></script>
 	<script src="sketch.js"></script>
+	<script type="text/javascript">
+		(function() {
+		  window.addEventListener('touchstart', function(evt) {
+		    if (evt.target && evt.target.href) {
+					evt.preventDefault();
+
+					evt.target.target = '_self';
+
+					evt.target.click();
+				}
+		  });
+		})();
+	</script>
 </body>
 </html>
